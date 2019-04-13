@@ -3,8 +3,9 @@ package org.tio.showcase.server;
 import org.tio.utils.time.Time;
 
 /**
- * @author tanyaowu
+ * 配置类
  *
+ * @author Chr
  */
 public abstract class ShowcaseServerConfig {
     /**
@@ -24,13 +25,14 @@ public abstract class ShowcaseServerConfig {
      * 心跳超时时间，单位：毫秒
      */
     public static final int HEARTBEAT_TIMEOUT = 1000 * 60;
+
     /**
      * ip数据监控统计，时间段
-     * @author tanyaowu
      *
+     * @author Chr
      */
     public static interface IpStatDuration {
         public static final Long DURATION_1 = Time.MINUTE_1 * 5;
-        public static final Long[] IPSTAT_DURATIONS = new Long[] { DURATION_1 };
+        public static final Long[] IPSTAT_DURATIONS = new Long[]{DURATION_1};
     }
 }

@@ -11,8 +11,10 @@ import org.tio.showcase.http.HttpServerShowcaseStarter;
 import org.tio.utils.jfinal.P;
 
 /**
- * @author tanyaowu
- * 2017年7月19日 下午4:59:04
+ * 加载配置类进行初始化
+ *
+ * @author Chr
+ *         2017年7月19日 下午4:59:04
  */
 public class HttpServerInit {
     @SuppressWarnings("unused")

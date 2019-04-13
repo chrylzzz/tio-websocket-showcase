@@ -10,22 +10,21 @@ var handler = new DemoHandler()
 
 var tiows
 
-function initWs () {
-  var queryString = 'name=kebi&name=kuli&name=kuli&token=11&userid=adfadsf'
-  var param = "token=11&userid=adfadsf";
-  tiows = new tio.ws(ws_protocol, ip, port, queryString, param, handler, heartbeatTimeout, reconnInterval, binaryType)
-  tiows.connect()
+function initWs() {
+    var queryString = 'name=kebi&name=kuli&name=kuli&token=11&userid=adfadsf'
+    var param = "token=11&userid=adfadsf";
+    tiows = new tio.ws(ws_protocol, ip, port, queryString, param, handler, heartbeatTimeout, reconnInterval, binaryType)
+    tiows.connect()
 }
 
 
-
-function send () {
-  var msg = document.getElementById('textId')
-  tiows.send(msg.value)
+function send() {
+    var msg = document.getElementById('textId')
+    tiows.send(msg.value)
 }
 
-function clearMsg () {
-  document.getElementById('contentId').innerHTML = ''
+function clearMsg() {
+    document.getElementById('contentId').innerHTML = ''
 }
 
 initWs()

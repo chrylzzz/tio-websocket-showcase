@@ -14,14 +14,18 @@ import org.tio.websocket.server.handler.IWsMsgHandler;
 import java.util.Objects;
 
 /**
- * @author tanyaowu
- * 2017年6月28日 下午5:32:38
+ * 握手，Handler
+ *
+ * @author Chr
+ *         2017年6月28日 下午5:32:38
  */
 public class ShowcaseWsMsgHandler implements IWsMsgHandler {
     private static Logger log = LoggerFactory.getLogger(ShowcaseWsMsgHandler.class);
     public static final ShowcaseWsMsgHandler me = new ShowcaseWsMsgHandler();
+
     private ShowcaseWsMsgHandler() {
     }
+
     /**
      * 握手时走这个方法，业务可以在这里获取cookie，request参数等
      */
@@ -34,12 +38,13 @@ public class ShowcaseWsMsgHandler implements IWsMsgHandler {
         log.info("收到来自{}的ws握手包\r\n{}", clientip, request.toString());
         return httpResponse;
     }
+
     /**
      * @param httpRequest
      * @param httpResponse
      * @param channelContext
      * @throws Exception
-     * @author tanyaowu
+     * @author Chr
      */
     @Override
     public void onAfterHandshaked(HttpRequest httpRequest, HttpResponse httpResponse, ChannelContext channelContext) throws Exception {
@@ -52,6 +57,7 @@ public class ShowcaseWsMsgHandler implements IWsMsgHandler {
         //群发
         Tio.sendToGroup(channelContext.groupContext, Const.GROUP_ID, wsResponse);
     }
+
     /**
      * 字节消息（binaryType = arraybuffer）过来后会走这个方法
      */
@@ -59,6 +65,7 @@ public class ShowcaseWsMsgHandler implements IWsMsgHandler {
     public Object onBytes(WsRequest wsRequest, byte[] bytes, ChannelContext channelContext) throws Exception {
         return null;
     }
+
     /**
      * 当客户端发close flag时，会走这个方法
      */
@@ -67,6 +74,7 @@ public class ShowcaseWsMsgHandler implements IWsMsgHandler {
         Tio.remove(channelContext, "receive close flag");
         return null;
     }
+
     /*
      * 字符消息（binaryType = blob）过来后会走这个方法
      */

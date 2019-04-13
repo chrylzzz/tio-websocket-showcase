@@ -4,47 +4,47 @@ import java.io.Serializable;
 
 public class User implements Serializable {
 
-	private static final long serialVersionUID = 7038736722168521022L;
-	
-	private Integer id;
-	
-	private String loginname;
+    private static final long serialVersionUID = 7038736722168521022L;
 
-	private String nick;
+    private Integer id;
 
-	private String ip;
+    private String loginname;
 
-	public Integer getId() {
-		return id;
-	}
+    private String nick;
 
-	public void setId(Integer id) {
-		this.id = id;
-	}
+    private String ip;
 
-	public String getLoginname() {
-		return loginname;
-	}
+    public Integer getId() {
+        return id;
+    }
 
-	public void setLoginname(String loginname) {
-		this.loginname = loginname;
-	}
+    public void setId(Integer id) {
+        this.id = id;
+    }
 
-	public String getNick() {
-		return nick;
-	}
+    public String getLoginname() {
+        return loginname;
+    }
 
-	public void setNick(String nick) {
-		this.nick = nick;
-	}
+    public void setLoginname(String loginname) {
+        this.loginname = loginname;
+    }
 
-	public String getIp() {
-		return ip;
-	}
+    public String getNick() {
+        return nick;
+    }
 
-	public void setIp(String ip) {
-		this.ip = ip;
-	}
+    public void setNick(String nick) {
+        this.nick = nick;
+    }
+
+    public String getIp() {
+        return ip;
+    }
+
+    public void setIp(String ip) {
+        this.ip = ip;
+    }
 
 
 }

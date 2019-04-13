@@ -1,7 +1,7 @@
 package org.tio.showcase.server;
 
 /**
- * @author tanyaowu
+ * @author Chr
  */
 public class Const {
     /**

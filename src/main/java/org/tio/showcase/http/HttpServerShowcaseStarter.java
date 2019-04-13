@@ -17,8 +17,9 @@ import java.io.IOException;
  * ab -c 200 -n 200000 -k http://127.0.0.1:9527/test/abtest
  * ab -c 300 -n 200000 -k http://127.0.0.1:9527/test/abtest
  * ab -c 400 -n 200000 -k http://127.0.0.1:9527/test/abtest
- * @author tanyaowu
- * 2017年6月28日 下午5:34:04
+ *
+ * @author Chr
+ *         2017年6月28日 下午5:34:04
  */
 public class HttpServerShowcaseStarter {
     @SuppressWarnings("unused")
@@ -26,8 +27,8 @@ public class HttpServerShowcaseStarter {
 
     /**
      * @param args
-     * @author tanyaowu
      * @throws IOException
+     * @author Chr
      */
     public static void main(String[] args) throws Exception {
         P.use("app.properties");
@@ -36,8 +37,7 @@ public class HttpServerShowcaseStarter {
     }
 
     /**
-     *
-     * @author tanyaowu
+     * @author Chr
      */
     public HttpServerShowcaseStarter() {
     }
